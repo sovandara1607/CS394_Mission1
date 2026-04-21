@@ -21,7 +21,7 @@ def course_register(request):
         form = CourseForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Course registered successfully!')
+            messages.success(request, 'Student enrolled in course successfully!')
             return redirect('course_register')
     else:
         form = CourseForm()
