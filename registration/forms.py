@@ -5,7 +5,7 @@ from .models import Student, Course, Registration
 class StudentForm(forms.ModelForm):
     class Meta:
         model = Student
-        fields = ['first_name', 'last_name', 'email', 'phone', 'age', 'gender', 'major', 'created_at']
+        fields = ['first_name', 'last_name', 'email', 'phone', 'age', 'gender', 'major']
         widgets = {
             'first_name': forms.TextInput(attrs={'class': 'form-control'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control'}),
@@ -14,7 +14,6 @@ class StudentForm(forms.ModelForm):
             'age': forms.NumberInput(attrs={'class': 'form-control'}),
             'gender': forms.TextInput(attrs={'class': 'form-control'}),
             'major': forms.TextInput(attrs={'class': 'form-control'}),
-            'created_at': forms.DateTimeInput(attrs={'class': 'form-control', 'readonly': 'readonly'}),
         }
 
 
