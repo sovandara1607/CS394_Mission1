@@ -6,8 +6,11 @@ class Student(models.Model):
     id = ObjectIdAutoField(primary_key=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
+    age = models.IntegerField()
+    gender = models.CharField(max_length=10, blank=True)
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=20, blank=True)
+    major = models.CharField(max_length=100, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
