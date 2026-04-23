@@ -48,6 +48,9 @@
                                 <th>Last Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Major</th>
                                 <th>Enrolled At</th>
                             </tr>
                         </thead>
@@ -63,6 +66,9 @@
                                     </a>
                                 </td>
                                 <td>{{ reg.student.phone|default:"-" }}</td>
+                                <td>{{ reg.student.age|default:"-" }}</td>
+                                <td>{{ reg.student.gender|default:"-" }}</td>
+                                <td>{{ reg.student.major|default:"-" }}</td>
                                 <td>{{ reg.registered_at|date:"Y-m-d H:i" }}</td>
                             </tr>
                             {% endfor %}
